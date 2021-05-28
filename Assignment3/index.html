@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Frontend Form</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="shortcut icon" href="#">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Assingment 3</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								
+									
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<div class="content" id="menu" style="display: block;">
+										<h3 class="mb-4">Choose one the following:</h3>
+										<br>
+										<table width="85%" align="center" class="mb-4"><tr>
+										<td><button class="btn btn-primary" onclick="get_token()">Get Token</button>
+										<td><button class="btn btn-primary" onclick="register()">Register</button>
+										<td><button class="btn btn-primary" onclick="get_data()">Get Data</button>
+										<td><button class="btn btn-primary" onclick="viewResp()">View Log</button>
+										</tr></table>
+									</div>
+									<div class="maincontent" id="response" style="display: none;">
+									</div>
+									<div class="maincontent" id="register" style="display: none;">
+										<h3 class="mb-4">Registration Form</h3>
+										<form id="formReg" name="regForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">User Name</label>
+														<input type="text" class="form-control" name="username" id="username" placeholder="User Name">
+													</div>
+												</div>
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="name">Token ID</label>
+														<input type="text" class="form-control" name="token" id="token" placeholder="Token from 'Get Token'">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="subject">Data</label>
+														<input type="text" class="form-control" name="data" id="data" placeholder="Data to Store">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="button" value="Send Data" class="btn btn-primary" onclick="submitdata(this.form)">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="maincontent" id="formData" style="display: none;">
+										<h3 class="mb-4">Form to Request Stored Data</h3>
+										<form method="POST" id="dataForm" name="dataForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="email">Token ID</label>
+														<input type="text" class="form-control" name="token" id="token" placeholder="Token ID">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="button" value="Fetch Data" class="btn btn-primary" onclick="GetSubdata(this.form)">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary w-100 p-md-5 p-4">
+									<h3>Help Page</h3>
+									<p class="mb-4">This application has following:</p>
+
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="text pl-3">
+										<p><span><b>New User :</a></b></span> A new user must first generate a token with "Get Token" then register with a username and data from "Register User".</p></div>
+									</div>
+									
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="text pl-3">
+										<p><span><b>Existing User :</a></b></span> A new user must first generate a token with "Get Token" then register with a username and data from "Register User".</p></div>
+									</div>
+									
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="text pl-3">
+										<p><span><b><a href='http://localhost:12345/' target="blank">Backend :</a></b></span> Show information about backend endpoints</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
